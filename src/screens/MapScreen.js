@@ -74,7 +74,7 @@ function Map() {
           //return an object with the 
           setViewport((prevState) => ({
             ...prevState,
-            zoom: 10,
+            zoom: 11,
             latitude,
             longitude
           }));
