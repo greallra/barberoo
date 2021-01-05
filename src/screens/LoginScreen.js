@@ -37,8 +37,8 @@ const Wrapper = styled.label`
 
 export default function LoginScreen() {
     const classes = useStyles();
-    const [email, setEmail] = useState('ryan@gmail.com');
-    const [password, setPassword] = useState('Red1234!');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
     const history = useHistory();
     const dispatch = useDispatch()
     const user = useSelector( (store) => store.user )

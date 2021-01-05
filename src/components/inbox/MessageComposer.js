@@ -34,12 +34,12 @@ export default function MessageComposer() {
 
     function handleSendMessage(e) {
         e.preventDefault()
-
+        
         if(activeMessagesId && text) {
             dispatch(sendMessage(activeMessagesId, text))
             setText('')
         }
-        setText('')
+       
     }
     return (
         <MC onSubmit={handleSendMessage}>

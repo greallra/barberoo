@@ -63,7 +63,6 @@ router.get('/users/me', auth, async (req,res)=>{
 router.get('/users/barbers', auth, async (req,res)=>{ 
     try {
         const babers = await User.find({user_type: 'BARBER'})
-        console.log("test");
         res.status(200).send(babers)
     } catch (e) {
         res.status(400).send({error: e.message})
@@ -82,7 +81,6 @@ router.get('/users', auth, async (req,res)=>{
 
 router.patch('/users/me', auth, async(req,res)=>{
     const updates = Object.keys(req.body);
-    console.log("req.body",req.body);
     const allowedUpdates = ['name', 'email','password','age'];
     //check the properties to update are allowed
     const isValidOperation = updates.every((update)=>{

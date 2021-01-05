@@ -82,21 +82,21 @@ const errorStyle = { color: "var(--error-red)"  }
 
 export default function Signup() {
     const classes = useStyles();
-    const [username, setUsername] = useState('test3')
+    const [username, setUsername] = useState('')
     const [usernameValid, setUsernameValid] = useState(false)
-    const [first_name, setFirstName] = useState('Stu')
-    const [last_name, setLastName] = useState('Martin')
+    const [first_name, setFirstName] = useState('')
+    const [last_name, setLastName] = useState('')
     const [age, setAge] = useState(0)
-    const [email, setEmail] = useState('test3@gmail.com')
+    const [email, setEmail] = useState('')
     const [emailValid, setEmailValid] = useState(false)
-    const [user_type, setUserType] = useState('BARBER')
-    const [user_type_valid, setUserTypeValid] = useState('BARBER')
-    const [password, setPassword] = useState('Red1234!')
-    const [confirmPassword, setConfirmPassword] = useState('Red1234!')
+    const [user_type, setUserType] = useState('')
+    const [user_type_valid, setUserTypeValid] = useState('')
+    const [password, setPassword] = useState('')
+    const [confirmPassword, setConfirmPassword] = useState('')
     const [passwordsMatch, setPasswordsMatch] = useState(false)
-    const [summary, setSummary] = useState('Im a great little barber')
-    const [minPrice, setMinPrice] = useState('22.00')
-    const [maxPrice, setMaxPrice] = useState('32.00')
+    const [summary, setSummary] = useState('')
+    const [minPrice, setMinPrice] = useState('')
+    const [maxPrice, setMaxPrice] = useState('')
     const [geo, setGeo] = useState({ address: '', lat: undefined, lng: undefined })
     const [geoValid, setGeoValid] = useState(false)
     const [files, setFiles] = useState([])
@@ -170,7 +170,7 @@ export default function Signup() {
     function handleKeyDown(e) {
       if(e.key === 'Backspace') setMinPrice(e.target.value)
     }
-    console.log("signupStatus", signupStatus);
+   
     async function handleSubmit(e) {
       e.preventDefault();
       if(usernameValid, emailValid, user_type_valid, passwordsMatch, summary.length > 5, minPrice.length === 5, geoValid , files.length > 0 ){
