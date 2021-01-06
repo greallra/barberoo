@@ -265,13 +265,13 @@ export default function Signup() {
                   {user_type === 'BARBER' && <CheckCircleIcon style={checkStyle}/>}
                   </FieldWrapper>
                 <FieldWrapper>
-                    <TextField id="outlined-basic" label="Outlined" variant="outlined" label="Password" value={password} onChange={ (e) => setPassword(e.target.value) } className={classes.textField}/>
+                    <TextField id="outlined-basic" label="Outlined" variant="outlined" label="Password" value={password} onChange={ (e) => setPassword(e.target.value) } className={classes.textField} type="password"/>
                     {!password && <Required>Required</Required>}
                     {password && checkPassword(password) && <CheckCircleIcon style={checkStyle}/>}
                     {password && !checkPassword(password) && <ErrorIcon style={errorStyle}/>}
                 </FieldWrapper>
                 <FieldWrapper>
-                    <TextField id="outlined-basic" label="Outlined" variant="outlined" label="Confirm Password" value={confirmPassword} onChange={ (e) => setConfirmPassword(e.target.value) } className={classes.textField}/>
+                    <TextField id="outlined-basic" label="Outlined" variant="outlined" label="Confirm Password" value={confirmPassword} onChange={ (e) => setConfirmPassword(e.target.value) } className={classes.textField} type="password"/>
                     {!confirmPassword && <Required>Required</Required>}
                     {confirmPassword && checkPassword(confirmPassword) && passwordsMatch && <CheckCircleIcon style={checkStyle}/>}
                     {confirmPassword && !checkPassword(confirmPassword) && <ErrorIcon style={errorStyle}/>}

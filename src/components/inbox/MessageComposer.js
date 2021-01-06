@@ -37,13 +37,16 @@ export default function MessageComposer() {
         
         if(activeMessagesId && text) {
             dispatch(sendMessage(activeMessagesId, text))
+            
             setText('')
+            console.log(" reset text", text);
         }
        
     }
+    console.log("text", text);
     return (
         <MC onSubmit={handleSendMessage}>
-            <Input text={text} onChange={ (e) => setText(e.target.value) }></Input>
+            <Input value={text} onChange={ (e) => setText(e.target.value) }></Input>
             <IconButton><Button type="submit" variant="outlined">Send</Button></IconButton>
         </MC>
     )
