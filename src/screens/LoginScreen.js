@@ -69,7 +69,7 @@ export default function LoginScreen() {
             <form className={classes.root} noValidate autoComplete="off" onSubmit={handleSubmit}>
                 {errorMessage ? <Alert severity="error">{errorMessage}</Alert> : <Alert severity="error" style={{visibility: 'hidden'}}></Alert>} 
                 <TextField id="outlined-basic" label="Outlined" variant="outlined" label="Email" value={email} onChange={ e => setEmail(e.target.value)}/>
-                <TextField id="outlined-basic" label="Outlined" variant="outlined" label="Password" value={password} onChange={ e => setPassword(e.target.value) }/>
+                <TextField id="outlined-basic" label="Outlined" variant="outlined" label="Password" value={password} onChange={ e => setPassword(e.target.value) } type="password"/>
                 <Button variant="contained" color="secondary" type="submit">
                 Login
                 </Button>
