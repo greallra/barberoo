@@ -161,7 +161,6 @@ userSchema.methods.toJSON = function () {
 //token method
 //methods - these are used on instances: user (lowercase)
 userSchema.methods.generateAuthToken = async function (){
-    console.log("generate auth token ran");
     const user = this;
     //generate token : use the users id to sign
     const token = jwt.sign({_id: user._id.toString()}, process.env.JWT_SECRET);

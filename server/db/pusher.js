@@ -33,7 +33,12 @@ db.once('open', () => {
                     ...newMessage,
                     sender: user
                 }
-                pusher.trigger('barberoo-channel', 'new-message', msg)
+                try {
+                    pusher.trigger('barberoo-channel', 'new-message', msg)
+                } catch (e) {
+                    console.log("pusher error", e);
+                }
+                
             })
            
         } else {
