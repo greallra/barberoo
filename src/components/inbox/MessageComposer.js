@@ -37,7 +37,6 @@ export default function MessageComposer() {
         
         if(activeMessagesId && text) {
             dispatch(sendMessage(activeMessagesId, text))
-            
             setText('')
             console.log(" reset text", text);
         }
